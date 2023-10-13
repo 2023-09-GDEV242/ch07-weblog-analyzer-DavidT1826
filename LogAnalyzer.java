@@ -71,4 +71,34 @@ public class LogAnalyzer
         }
         return total;
     }
+    /**
+     * Return the hour with the most enteries in it.
+     */
+    public int busiestHour()
+    {
+        int largestNum = 0;
+        int busiest = 0;
+        for(int hour = 0; hour < hourCounts.length; hour++) {
+            if(hourCounts[hour] >= largestNum){
+                largestNum = hourCounts[hour];
+                busiest = hour;
+            }
+        }
+        return busiest;
+    }
+    /**
+     * Return the hour with the least enteries in it.
+     */
+    public int quietestHour()
+    {
+        int smallestNum = hourCounts[0];
+        int quietest = 0;
+        for(int hour = 0; hour < hourCounts.length; hour++) {
+            if(hourCounts[hour] <= smallestNum){
+                smallestNum = hourCounts[hour];
+                quietest = hour;
+            }
+        }
+        return quietest;
+    }
 }
