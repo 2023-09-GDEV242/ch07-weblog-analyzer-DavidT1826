@@ -1,8 +1,8 @@
 /**
  * Read web server data and analyse hourly access patterns.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version    2016.02.29
+ * @author David Thompson
+ * @version    2023.08.13
  */
 public class LogAnalyzer
 {
