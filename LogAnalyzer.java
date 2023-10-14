@@ -101,4 +101,21 @@ public class LogAnalyzer
         }
         return quietest;
     }
+    /**
+     * Return the two-hour period with the most enteries. 
+     * Only the first number will be returned
+     */
+    public int busiestTwoHour()
+    {
+        int largestNum = 0;
+        int busiest = 0;
+        for(int hour = 0; hour < hourCounts.length - 1; hour++){
+            int sum = hourCounts[hour] + hourCounts[hour + 1];
+            if(sum >= largestNum){
+                largestNum = sum;
+                busiest = hour;
+            }
+        }
+        return busiest;
+    }
 }
